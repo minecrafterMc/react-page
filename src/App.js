@@ -7,6 +7,7 @@ function getWindowDimensions() {
   return width;
 }
 var popup;
+var gameDestination;
 if (getWindowDimensions() > 600) {
   popup = "popup";
 } else {
@@ -27,6 +28,7 @@ function Icon({ Id }) {
     document.getElementById("popup-name").innerHTML = data[Id].name;
     document.getElementById("popup-desc").innerHTML = data[Id].description;
     document.getElementById("popup-img").src = data[Id].banner;
+    gameDestination = data[Id].url;
     document.getElementById("popup-patchNotes").innerHTML =
       ReactDOMServer.renderToString(patchList);
     document.getElementById("popup").style.display = "block";
@@ -39,7 +41,14 @@ function Icon({ Id }) {
   }
   return <img className={iconname} src={data[Id].Icon} onClick={handleClick} />;
 }
-
+function PlayButton(){
+  function handleClick(){
+    window.location.href = gameDestination;
+  }
+  return(
+    <img src="https://minecraftermc.github.io/react-page/assets/Play.webp" onClick={handleClick}/>
+  )
+}
 function App() {
   function closePopup() {
     document.getElementById("popup").style.display = "none";
@@ -53,13 +62,12 @@ function App() {
         </button>
         <h1 className="popup-title" id="popup-name"></h1>
         <h3 className="popup-title" id="popup-desc"></h3>
+        <PlayButton />
         <h2 className="popup-title">Patch Notes:</h2>
         <div id="popup-patchNotes"></div>
       </div>
       <div className="Games">
         <h1 className="title">Games</h1>
-        <Icon Id="tetis"></Icon>
-        <Icon Id="tetis"></Icon>
         <Icon Id="tetis"></Icon>
       </div>
     </div>

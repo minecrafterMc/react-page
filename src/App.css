@@ -4,7 +4,7 @@ body{
   height: inherit;
 }
 
-.Icon{
+.Icon,.small-Icon{
   width: 80px;
   border-radius: 10px;
   border: red 2px solid;
@@ -27,15 +27,69 @@ body{
   color: azure;
 
 }
+.popup-title{
+  width: 100%;
+  text-align: center;
+  color: azure;
+
+}
 .popup{
   position:fixed;
-  width: 70%;
-  height: 70%;
-  margin-right: 15%;
-  margin-left: 15%;
-  margin-top: 5%;
+  max-width: 70%;
+  max-height: 90%;
+  overflow: scroll;
   border-radius: 20px;
   background-color: rgb(43, 43, 43);
-  padding: 20px;
+  padding: 0px;
   display: none;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.popup img{
+  width: 500000000px;
+  max-width: 100%;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  border-radius: 20px;
+  z-index: 0;
+}
+.small-popup{
+  position:fixed;
+  width: 100%;
+  max-height: 90%;
+  overflow: scroll;
+  border-radius: 20px;
+  background-color: rgb(43, 43, 43);
+  padding: 0px;
+  display: none;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.small-popup img{
+  max-width: 100%;
+  width: 500000000px;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  border-radius: 20px;
+  z-index: 0;
+}
+.popup-close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 40px;
+  width: 40px;
+  opacity: 70%;
+}
+.popup-patchNotes-title{
+  width: 100%;
+  text-align: center;
+  color: azure;
+}
+#popup-patchNotes{
+  max-height: 200px;
+  background-color: rgb(24, 24, 24);
+  color: azure;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: scroll;
 }

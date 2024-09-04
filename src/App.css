@@ -40,10 +40,18 @@ body{
   overflow: scroll;
   border-radius: 20px;
   background-color: rgb(43, 43, 43);
-  padding: 0px;
+  padding: -10px;
   display: none;
   left: 50%;
   transform: translate(-50%, 0);
+}
+.popup::-webkit-scrollbar {
+  width: 0px;
+  opacity: 0%;
+}
+#popup-patchNotes::-webkit-scrollbar {
+  width: 0px;
+  opacity: 0%;
 }
 .fade-img{
   width: 500000000px;

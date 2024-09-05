@@ -108,7 +108,7 @@ function App() {
       <h1 className="title">Games</h1>
       <div className="kontener">
         <Icon Id="tetis" />
-        <Icon Id="mineSlapper" />
+        <Icon Id="mineSplapper" />
       </div>
       <h1 className="title">Tools</h1>
       <div className="kontener">

@@ -76,7 +76,7 @@ const data = {
   },
   mineSplapper: {
     Icon: "https://minecraftermc.github.io/react-page/assets/MineSlapperIcon.png",
-    name: "Tetis",
+    name: "Mine Slapper",
    banner: "https://minecraftermc.github.io/react-page/assets/mineSlapper.png",
    url:"https://minecraftermc.github.io/projectsFiles/MineSlapper",
     description: "Minesweeper, but made by me.",

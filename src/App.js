@@ -31,6 +31,7 @@ function Icon({ Id }) {
     gameDestination = data[Id].url;
     document.getElementById("popup-patchNotes").innerHTML =
       ReactDOMServer.renderToString(patchList);
+    document.getElementById("popup-footer").innerHTML = data[Id].footer;
     document.getElementById("popup").style.display = "block";
   }
   let iconname;
@@ -46,7 +47,9 @@ function PlayButton(){
     window.location.href = gameDestination;
   }
   return(
-    <img src="https://minecraftermc.github.io/react-page/assets/Play.webp" onClick={handleClick}/>
+    <div className="popup-playDiv">
+    <img src="https://minecraftermc.github.io/react-page/assets/Play.webp"  className="popup-playImg" onClick={handleClick}/>
+    </div>
   )
 }
 function App() {
@@ -65,10 +68,12 @@ function App() {
         <PlayButton />
         <h2 className="popup-title">Patch Notes:</h2>
         <div id="popup-patchNotes"></div>
+        <h3 className="popup-title" id="popup-footer"></h3>
       </div>
       <div className="Games">
         <h1 className="title">Games</h1>
-        <Icon Id="tetis"></Icon>
+        <Icon Id="tetis" />
+        <Icon Id="tetisEditor" />
       </div>
     </div>
   );

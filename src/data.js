@@ -1,8 +1,8 @@
 const data = {
   tetis: {
-    Icon: "https://minecraftermc.github.io/react-page/assets/TetisIcon.png",
+    Icon: "/TetisIcon.png",
     name: "Tetis",
-   banner: "https://minecraftermc.github.io/react-page/assets/tetis.png",
+   banner: "/tetis.png",
    url:"https://minecraftermc.github.io/projectsFiles/Tetis/",
     description: "Tetris, but made by me",
     footer:"<a href='https://github.com/minecraftermc/tetis'>github</a><br />Sfx credits: zapsplat.com<br />Made by MinecrafterMc",
@@ -45,16 +45,17 @@ const data = {
       }
     ],
     gallery:[
-      { url: "https://minecraftermc.github.io/react-page/assets/screenshots/tetis/1.png", caption:"", id: 1},
-      { url: "https://minecraftermc.github.io/react-page/assets/screenshots/tetis/2.png", caption:"", id: 2},
-      { url: "https://minecraftermc.github.io/react-page/assets/screenshots/tetis/3.png", caption:"", id: 3},
-      { url: "https://minecraftermc.github.io/react-page/assets/screenshots/tetis/4.png", caption:"the quick mode maker", id: 4}
+      { url: "/screenshots/tetis/1.png", caption:"", id: 1},
+      { url: "/screenshots/tetis/2.png", caption:"", id: 2},
+      { url: "/screenshots/tetis/3.png", caption:"", id: 3},
+      { url: "/screenshots/tetis/4.png", caption:"the quick mode maker", id: 4}
     ]
   },
+  
   tetisEditor: {
-    Icon: "https://minecraftermc.github.io/react-page/assets/TetisEditorIcon.png",
+    Icon: "/TetisEditorIcon.png",
     name: "Tetis Editor",
-   banner: "https://minecraftermc.github.io/react-page/assets/tetisEditor.png",
+   banner: "/tetisEditor.png",
    url:"https://minecraftermc.github.io/projectsFiles/tetis-editor/",
     description: "a mode editor for tetis",
     footer:"<a href='https://github.com/minecraftermc/tetis-editor'>github</a><br />Made by MinecrafterMc, Krysoer",
@@ -69,15 +70,15 @@ const data = {
       }
     ],
     gallery:[
-      { url: "https://minecraftermc.github.io/react-page/assets/screenshots/tetisEditor/1.png", caption:"", id: 1},
-      { url: "https://minecraftermc.github.io/react-page/assets/screenshots/tetisEditor/2.png", caption:"", id: 2},
-      { url: "https://minecraftermc.github.io/react-page/assets/screenshots/tetisEditor/3.png", caption:"", id: 3}
+      { url: "/screenshots/tetisEditor/1.png", caption:"", id: 1},
+      { url: "/screenshots/tetisEditor/2.png", caption:"", id: 2},
+      { url: "/screenshots/tetisEditor/3.png", caption:"", id: 3}
     ]
   },
   mineSplapper: {
-    Icon: "https://minecraftermc.github.io/react-page/assets/MineSlapperIcon.png",
+    Icon: "/MineSlapperIcon.png",
     name: "Mine Slapper",
-   banner: "https://minecraftermc.github.io/react-page/assets/mineSlapper.png",
+   banner: "/mineSlapper.png",
    url:"https://minecraftermc.github.io/projectsFiles/MineSlapper",
     description: "Minesweeper, but made by me.",
     footer:"<a href='https://github.com/minecrafterMc/Mineslapper'>github</a><br />Made by MinecrafterMc",
@@ -98,9 +99,61 @@ const data = {
       }
     ],
     gallery:[
-      { url: "https://minecraftermc.github.io/react-page/assets/screenshots/mineSlapper/1.png", caption:"", id: 1},
-      { url: "https://minecraftermc.github.io/react-page/assets/screenshots/mineSlapper/2.png", caption:"", id: 2},
-      { url: "https://minecraftermc.github.io/react-page/assets/screenshots/mineSlapper/3.png", caption:"", id: 3}
+      { url: "/screenshots/mineSlapper/1.png", caption:"", id: 1},
+      { url: "/screenshots/mineSlapper/2.png", caption:"", id: 2},
+      { url: "/screenshots/mineSlapper/3.png", caption:"", id: 3}
+    ]
+  },
+  tetis2: {
+    Icon: "/Tetis2Icon.png",
+    name: "Tetis 2",
+   banner: "/tetis2.png",
+   url:"https://minecraftermc.github.io/projectsFiles/Tetis/",
+    description: "A rougelike inspired by Tetris",
+    footer:"<a href='https://github.com/minecraftermc/Tetis2'>github</a><br />Made by MinecrafterMc",
+    changelog: [
+      {
+        id: 1,
+        number: "1.0",
+        notes: [
+          { text: "Full Release", key: 1 }
+        ]
+      },
+      {
+        id: 2,
+        number: "0.1",
+        notes: [
+          { text: "open betatest", key: 1 }
+        ]
+      }
+    ],
+    gallery:[
+      { url: "/screenshots/tetis2/1.png", caption:"", id: 1},
+      { url: "/screenshots/tetis2/2.png", caption:"", id: 2},
+      { url: "/screenshots/tetis2/3.png", caption:"", id: 3},
+      { url: "/screenshots/tetis2/4.png", caption:"the quick mode maker", id: 4}
+    ]
+  },
+  zeroDash: {
+    Icon: "/zeroDashIcon.jpg",
+    name: "Zero Dash",
+   banner: "/screenshots/zeroDash/2.png",
+   url:"https://minecraftermc.itch.io/zero-dash",
+    description: "My original game Zero Dash",
+    footer:"Made by MinecrafterMc",
+    changelog: [
+      {
+        id: 1,
+        number: "1.0",
+        notes: [
+          { text: "release", key: 1 }
+        ]
+      }
+    ],
+    gallery:[
+      { url: "/screenshots/zeroDash/1.png", caption:"", id: 1},
+      { url: "/screenshots/zeroDash/2.png", caption:"", id: 2},
+      { url: "/screenshots/zeroDash/3.png", caption:"", id: 3}
     ]
   }
 }

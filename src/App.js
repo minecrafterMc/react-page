@@ -19,10 +19,13 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  slideTimeout = setTimeout(showSlides, 3000); // Change image every 2 seconds
+  //slideTimeout = setTimeout(showSlides, 3000); // Change image every 2 seconds
 } 
+const imagePath = process.env.PUBLIC_URL + "/assets/";
+console.log(imagePath)
 var popup;
 var gameDestination;
+
 if (getWindowDimensions() > 600) {
   popup = "popup";
 } else {
@@ -43,15 +46,14 @@ function Icon({ Id }) {
     let gallery = data[Id].gallery.map((image) => (
       <div className="popup-gallery-image fade" key={image.id}>
   <div className="popup-gallery-numbertext">{image.id} / {data[Id].gallery.length}</div>
-  <img src={image.url} style={{width: "100%"}} />
+  <img src={imagePath + image.url} style={{width: "100%"}} />
   {image.caption != "" && <div className="popup-gallery-text">{image.caption}</div>}
 </div>
      
     ));
-    console.log(gallery)
     document.getElementById("popup-name").innerHTML = data[Id].name;
     document.getElementById("popup-desc").innerHTML = data[Id].description;
-    document.getElementById("popup-img").src = data[Id].banner;
+    document.getElementById("popup-img").src = imagePath + data[Id].banner;
     gameDestination = data[Id].url;
     document.getElementById("popup-patchNotes").innerHTML =
       ReactDOMServer.renderToString(patchList);
@@ -59,7 +61,8 @@ function Icon({ Id }) {
       ReactDOMServer.renderToString(gallery);
     document.getElementById("popup-footer").innerHTML = data[Id].footer;
     document.getElementById("popup").style.display = "block";
-    clearTimeout(slideTimeout);
+    clearInterval(slideTimeout);
+    slideTimeout = setInterval(showSlides, 3000);
     showSlides();
   }
   let iconname;
@@ -68,7 +71,7 @@ function Icon({ Id }) {
   } else {
     iconname = "Icon";
   }
-  return <img className={iconname} src={data[Id].Icon} onClick={handleClick} />;
+  return <img className={iconname} src={imagePath+data[Id].Icon} onClick={handleClick} />;
 }
 function PlayButton(){
   function handleClick(){
@@ -76,7 +79,7 @@ function PlayButton(){
   }
   return(
     <div className="popup-playDiv">
-    <img src="https://minecraftermc.github.io/react-page/assets/Play.webp"  className="popup-playImg" onClick={handleClick}/>
+    <img src={imagePath+"/Play.webp"}  className="popup-playImg" onClick={handleClick}/>
     </div>
   )
 }
@@ -105,16 +108,19 @@ function App() {
         <div id="popup-patchNotes"></div>
         <h3 className="popup-title" id="popup-footer"></h3>
       </div>
+      <div className="topBar"><img alt="Cloudy Games" className="logo" src={imagePath+"/cloudyGamesLogo.png"}/><a href="https://discord.gg/7UXnnjEntB"><img style={{height: 50}} src={imagePath+"/discord.png"} /></a></div>
       <h1 className="title">Games</h1>
       <div className="kontener">
         <Icon Id="tetis" />
         <Icon Id="mineSplapper" />
+        <Icon Id="zeroDash" />
       </div>
       <h1 className="title">Tools</h1>
       <div className="kontener">
 
         <Icon Id="tetisEditor" />
       </div>
+      
     </div>
   );
 }

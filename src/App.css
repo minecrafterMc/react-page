@@ -52,6 +52,7 @@ body{
   max-width: 70%;
   max-height: 90%;
   overflow: scroll;
+  overflow-x: hidden;
   border-radius: 20px;
   background-color: rgb(43, 43, 43);
   padding: -10px;
@@ -63,14 +64,14 @@ body{
   z-index: 1;
   
 }
-.popup::-webkit-scrollbar {
+/*.popup::-webkit-scrollbar {
   width: 0px;
   opacity: 0%;
 }
 #popup-patchNotes::-webkit-scrollbar {
   width: 0px;
   opacity: 0%;
-}
+}*/
 .fade-img{
   width: 500000000px;
   max-width: 100%;
@@ -83,12 +84,14 @@ body{
   width: 100%;
   max-height: 90%;
   overflow: scroll;
+  overflow-x: hidden;
   border-radius: 20px;
   background-color: rgb(43, 43, 43);
   padding: 0px;
   display: none;
   left: 50%;
   transform: translate(-50%, 0);
+  z-index: 1;
 }
 .small-popup .fade-img{
   max-width: 100%;
@@ -118,6 +121,7 @@ body{
   padding-top: 10px;
   padding-bottom: 10px;
   overflow: scroll;
+  overflow-x: hidden;
 }
 .popup-playDiv{
  width: 100%;
@@ -211,7 +215,23 @@ img {vertical-align: middle;}
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
+.topBar{
+  width: 100%;
+  background-color: rgb(24, 24, 24);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.topBar *{
+  margin-left: 40px;
+}
+.logo{
+  max-width: 10%;
+}
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
